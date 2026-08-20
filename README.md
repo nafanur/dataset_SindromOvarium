@@ -26,16 +26,20 @@ The dataset contains:
 * **31 numerical variables**
 * **13 categorical variables**
 
-The variables cover several groups of patient characteristics:
+Key variables include:
 
-* Demographic
-* Anthropometric
-* Clinical
-* Hormonal and laboratory
-* Reproductive
-* Physical symptoms
-* Lifestyle
-* Ovarian characteristics
+- Age
+- BMI
+- Cycle characteristics
+- FSH and LH
+- FSH/LH ratio
+- AMH
+- Weight gain
+- Hair growth
+- Skin darkening
+- Pimples
+- Follicle count
+- SO status
 
 The original patient-level dataset is **not included in this repository** due to data confidentiality and privacy considerations.
 
@@ -153,25 +157,7 @@ The ROC curve produced an **AUC of 0.928 (92.8%)**, indicating strong discrimina
 
 <img width="1076" height="758" alt="image" src="https://github.com/user-attachments/assets/295d1749-2267-4338-a539-02bf46ab23fb" />
 
-
 ---
-
-## Significant Predictors
-
-Based on the logistic regression analysis, several variables showed statistically significant relationships with SO status, including:
-* Follicle No. (R)
-* Hair growth
-* Weight gain
-* Cycle
-* Skin darkening
-* Marriage Status
-* Pimples
-* Follicle No. (L)
-
-The analysis also indicated that irregular menstrual cycles, hair growth, and weight gain were among the characteristics associated with higher odds of SO in the selected model.
-
----
-
 
 ## Logistic Regression Model
 
@@ -215,6 +201,22 @@ The model indicates that higher values of right ovarian follicle count,
 hair growth, weight gain, irregular menstrual cycle, skin darkening,
 pimples, and left ovarian follicle count are associated with higher
 log-odds of SO status, while the coefficient for marriage status is negative.
+
+## Significant Predictors
+
+Based on the logistic regression analysis, several variables showed statistically significant relationships with SO status, including:
+* Follicle No. (R)
+* Hair growth
+* Weight gain
+* Cycle
+* Skin darkening
+* Marriage Status
+* Pimples
+* Follicle No. (L)
+
+The analysis also indicated that irregular menstrual cycles, hair growth, and weight gain were among the characteristics associated with higher odds of SO in the selected model.
+
+---
 
 ## Key Findings
 
