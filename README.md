@@ -178,18 +178,7 @@ Let \(p = P(SO=1)\), where \(SO=1\) represents patients classified as having **S
 The fitted logistic regression model obtained using **Forward Selection** is:
 ### Final Logistic Regression Model
 The final model was obtained using the **Forward Selection** method.
-**Logit model:**
-> log(p / (1 − p)) =
->
-> −3.9129  
-> + 0.4451X<sub>1</sub>  
-> + 1.7599X<sub>2</sub>  
-> + 1.5263X<sub>3</sub>  
-> + 1.9300X<sub>4</sub>  
-> + 1.3605X<sub>5</sub>  
-> − 0.1435X<sub>6</sub>  
-> + 0.9877X<sub>7</sub>  
-> + 0.1615X<sub>8</sub>
+**log(p / (1 − p)) = −3.9129 + 0.4451X<sub>1</sub> + 1.7599X<sub>2</sub> + 1.5263X<sub>3</sub> + 1.9300X<sub>4</sub> + 1.3605X<sub>5</sub> − 0.1435X<sub>6</sub> + 0.9877X<sub>7</sub> + 0.1615X<sub>8</sub>**
 
 where:
 
