@@ -157,6 +157,7 @@ The ROC curve produced an **AUC of 0.928 (92.8%)**, indicating strong discrimina
 ---
 
 ## Significant Predictors
+
 Based on the logistic regression analysis, several variables showed statistically significant relationships with SO status, including:
 * Follicle No. (R)
 * Hair growth
@@ -216,6 +217,7 @@ pimples, and left ovarian follicle count are associated with higher
 log-odds of SO status, while the coefficient for marriage status is negative.
 
 ## Key Findings
+
 1. The dataset contained **541 patient observations and 44 variables** covering demographic, clinical, hormonal, reproductive, lifestyle, and ovarian characteristics.
 2. Data preprocessing included missing value handling, duplicate checking, outlier treatment, and categorical variable coding.
 3. The target variable was imbalanced, with **67.28% No SO** and **32.72% SO** observations.
@@ -225,6 +227,7 @@ log-odds of SO status, while the coefficient for marriage status is negative.
 
 
 ## Tools
+
 * Python
 * Microsoft Excel
 * Data Cleaning
@@ -265,4 +268,5 @@ Interpretation
 
 
 **BNSP Data Analyst Competency Certification Project – 2026**
+
 **Author:** Nafa Nurhanifah
