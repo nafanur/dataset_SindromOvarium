@@ -177,45 +177,47 @@ The analysis also indicated that irregular menstrual cycles, hair growth, and we
 
 
 ## Logistic Regression Model
+
 The final logistic regression model was obtained using the **Forward Selection** method.
 
-Let \(p = P(SO=1)\), where \(SO=1\) represents patients classified as having Sindrom Ovarium.
-The fitted logit model is:
+Let \(p = P(SO=1)\), where \(SO=1\) represents patients classified as having **Syndrom Ovarium**. The fitted logit model is:
+
 $$
-\ln\left(\frac{p}{1-p}\right)
-=
+\begin{aligned}
+\ln\left(\frac{p}{1-p}\right) =\;&
 -3.9129
-+0.4451(\text{Follicle No. (R)})
-+1.7599(\text{Hair Growth})
-+1.5263(\text{Weight Gain})
-+1.9300(\text{Cycle\_R/I\_4.0})
-+1.3605(\text{Skin Darkening})
--0.1435(\text{Marriage Status})
-+0.9877(\text{Pimples})
-+0.1615(\text{Follicle No. (L)})
++ 0.4451(\text{Follicle No. (R)}) \\
+&+ 1.7599(\text{Hair Growth})
++ 1.5263(\text{Weight Gain}) \\
+&+ 1.9300(\text{Cycle R/I = 4.0})
++ 1.3605(\text{Skin Darkening}) \\
+&- 0.1435(\text{Marriage Status})
++ 0.9877(\text{Pimples}) \\
+&+ 0.1615(\text{Follicle No. (L)})
+\end{aligned}
 $$
 
-The predicted probability of SO can be obtained from:
+The predicted probability of \(SO=1\) can be obtained from:
 
 $$
-p =
-\frac{\exp(\eta)}
-{1+\exp(\eta)}
+p = \frac{\exp(\eta)}{1+\exp(\eta)}
 $$
 
 where
 
 $$
-\eta =
+\begin{aligned}
+\eta =\;&
 -3.9129
-+0.4451(\text{Follicle No. (R)})
-+1.7599(\text{Hair Growth})
-+1.5263(\text{Weight Gain})
-+1.9300(\text{Cycle\_R/I\_4.0})
-+1.3605(\text{Skin Darkening})
--0.1435(\text{Marriage Status})
-+0.9877(\text{Pimples})
-+0.1615(\text{Follicle No. (L)})
++ 0.4451(\text{Follicle No. (R)}) \\
+&+ 1.7599(\text{Hair Growth})
++ 1.5263(\text{Weight Gain}) \\
+&+ 1.9300(\text{Cycle R/I = 4.0})
++ 1.3605(\text{Skin Darkening}) \\
+&- 0.1435(\text{Marriage Status})
++ 0.9877(\text{Pimples}) \\
+&+ 0.1615(\text{Follicle No. (L)})
+\end{aligned}
 $$
 
 ### Model Performance
