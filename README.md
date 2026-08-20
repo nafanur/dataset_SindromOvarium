@@ -83,13 +83,9 @@ Data balancing was therefore performed before model development.
 ## Statistical Analysis
 
 The relationship between patient characteristics and SO status was explored using categorical and numerical analysis.
-
 For categorical variables, contingency tables and association measures were used.
-
 For numerical variables, differences between SO and No SO groups were examined using an independent samples t-test.
-
 Several characteristics showed clearer differences between SO and No SO groups, particularly:
-
 * Hair growth
 * Weight gain
 * Menstrual cycle
@@ -178,47 +174,42 @@ The analysis also indicated that irregular menstrual cycles, hair growth, and we
 
 ## Logistic Regression Model
 
-The final logistic regression model was obtained using the **Forward Selection** method.
+Let \(p = P(SO=1)\), where \(SO=1\) represents patients classified as having **Syndrom Ovarium**.
 
-Let \(p = P(SO=1)\), where \(SO=1\) represents patients classified as having **Syndrom Ovarium**. The fitted logit model is:
+The fitted logistic regression model obtained using **Forward Selection** is:
 
 $$
-\begin{aligned}
-\ln\left(\frac{p}{1-p}\right) =\;&
+\log\left(\frac{p}{1-p}\right)
+=
 -3.9129
-+ 0.4451(\text{Follicle No. (R)}) \\
-&+ 1.7599(\text{Hair Growth})
-+ 1.5263(\text{Weight Gain}) \\
-&+ 1.9300(\text{Cycle R/I = 4.0})
-+ 1.3605(\text{Skin Darkening}) \\
-&- 0.1435(\text{Marriage Status})
-+ 0.9877(\text{Pimples}) \\
-&+ 0.1615(\text{Follicle No. (L)})
-\end{aligned}
++0.4451X_1
++1.7599X_2
++1.5263X_3
++1.9300X_4
++1.3605X_5
+-0.1435X_6
++0.9877X_7
++0.1615X_8
 $$
 
-The predicted probability of \(SO=1\) can be obtained from:
+where:
+
+- \(X_1\) = Follicle No. (R)
+- \(X_2\) = Hair Growth
+- \(X_3\) = Weight Gain
+- \(X_4\) = Cycle (R/I = 4.0)
+- \(X_5\) = Skin Darkening
+- \(X_6\) = Marriage Status
+- \(X_7\) = Pimples
+- \(X_8\) = Follicle No. (L)
+
+The predicted probability of \(SO=1\) is calculated as:
 
 $$
 p = \frac{\exp(\eta)}{1+\exp(\eta)}
 $$
 
-where
-
-$$
-\begin{aligned}
-\eta =\;&
--3.9129
-+ 0.4451(\text{Follicle No. (R)}) \\
-&+ 1.7599(\text{Hair Growth})
-+ 1.5263(\text{Weight Gain}) \\
-&+ 1.9300(\text{Cycle R/I = 4.0})
-+ 1.3605(\text{Skin Darkening}) \\
-&- 0.1435(\text{Marriage Status})
-+ 0.9877(\text{Pimples}) \\
-&+ 0.1615(\text{Follicle No. (L)})
-\end{aligned}
-$$
+where \(\eta\) is the linear predictor from the fitted logistic regression model.
 
 ### Model Performance
 - **Accuracy:** 85.32%
@@ -232,7 +223,6 @@ The model indicates that higher values of right ovarian follicle count,
 hair growth, weight gain, irregular menstrual cycle, skin darkening,
 pimples, and left ovarian follicle count are associated with higher
 log-odds of SO status, while the coefficient for marriage status is negative.
-
 
 ## Key Findings
 1. The dataset contained **541 patient observations and 44 variables** covering demographic, clinical, hormonal, reproductive, lifestyle, and ovarian characteristics.
